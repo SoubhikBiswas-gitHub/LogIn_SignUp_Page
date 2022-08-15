@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* number button hide */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* number button hide */
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7d2ae8;
+    padding: 30px;
+}
+
+.container {
+    border-radius: 30px;
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, .2);
+    perspective: 2700px;
+}
+
+.container .cover {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    /* background: #7d2ae8; */
+    /* background: red; */
+    z-index: 98;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+
+.container .cover .front,
+.container .cover .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cover .back {
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+}
+
+.container .cover::before,
+.container .cover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d0adfd;
+    opacity:.5 ;
+    z-index: 0;
+}
+
+.container .cover::after {
+    opacity: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container #flip:checked~.cover {
+    transform: rotateY(180deg);
+}
+
+.container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 100;
+}
+
+.container .form {
+    /* border: 1px solid green; */
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.container .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-container .log-in-form,
+.form-container .sign-up-form {
+    /* background-color: aquamarine; */
+    width: calc(100%/2-25px);
+}
+
+.form .form-container .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+
+}
+
+.form .form-container .title::before {
+    content: ' ';
+    background: #7d2ae8;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    left: 0;
+    bottom: 0;
+
+}
+
+.form .form-container .sign-up-form .title::before {
+    width: 20px;
+}
+
+.form .form-container .input-boxes {
+    margin-top: 30px;
+}
+
+.form .form-container .input-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.form-container .input-box input:focus,
+.form-container .input-box input:valid {
+    border-color: #7d2ae8;
+}
+
+.form-container .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+}
+
+.form-container .input-box i {
+    position: absolute;
+    color: #7d2ae8;
+    font-style: 17px;
+}
+
+.form-container .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-container .text a {
+    text-decoration: none;
+}
+
+.form-container .text a:hover {
+    text-decoration: underline;
+}
+
+.form-container .button {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.form-container .button input {
+    color: #fff;
+    background: #7d2ae8;
+    border-radius: 6px;
+    padding: 0;
+    width: 25%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.form-container .button input:hover {
+    background: #5b13b9;
+}
+
+.form .form-container label {
+    color: #2b1cff;
+    font-weight: 700;
+}
+
+.form .form-container label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.container #flip {
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .container .cover {
+        display: none;
+    }
+
+    .form-container .log-in-form,
+    .form-container .sign-up-form{
+        width: 100%;
+    }
+
+    /* .form-container .sign-up-form {
+        display: none;
+    }
+
+    .container #flip:checked~.form .sign-up-form{
+        display: block;
+    }
+
+    .container #flip:checked~.form .log-in-form {
+        display: none;
+    } */
+
+
+    .form-container .log-in-form {
+        display: none;
+    }
+
+    .container #flip:checked~.form .sign-up-form{
+        display: none;
+
+    }
+
+    .container #flip:checked~.form .log-in-form {
+        display: block;
+    }
+
+    
+
+    body{
+        background: url(./assets/smllScr_log.png) no-repeat fixed center;
+        background-size: cover;
+    }
+}
