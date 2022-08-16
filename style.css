@@ -7,6 +7,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#lpassword_visiable{
+    color: #5b13b9;
+    left:95%;
+    /* display: block; */
+}
+
+#password_visiable{
+    color: #5b13b9;
+    left:95%;
+    /* display: block; */
+}
+
+#cpassword_visiable{
+    color: #5b13b9;
+    left:95%;
+}
+
+
 #iconiv {
     color: rgb(197, 13, 13);
 }
@@ -125,19 +143,19 @@ body {
 .container .form-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .form-container .log-in-form,
 .form-container .sign-up-form {
     /* background-color: aquamarine; */
-    width: calc(100%/2-25px);
+    width: calc(100%/2-20px);
 }
 
 .form .form-container .title {
     position: relative;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 27px;
+    font-weight: 700;
     color: #333;
 
 }
@@ -147,14 +165,14 @@ body {
     background: #7d2ae8;
     position: absolute;
     height: 3px;
-    width: 25px;
+    width: 30px;
     left: 0;
     bottom: 0;
 
 }
 
 .form .form-container .sign-up-form .title::before {
-    width: 20px;
+    width: 26px;
 }
 
 .form .form-container .input-boxes {
@@ -168,6 +186,7 @@ body {
     height: 50px;
     width: 100%;
     position: relative;
+    margin-right: 40px;
 }
 
 .form-container .input-box input:focus,
@@ -180,8 +199,8 @@ body {
     width: 100%;
     outline: none;
     border: none;
-    padding: 0 30px;
-    font-size: 17px;
+    padding: 0 24px;
+    font-size: 20px;
     font-weight: 500;
     border-bottom: 2px solid rgba(0, 0, 0, .2);
 }
@@ -189,11 +208,11 @@ body {
 .form-container .input-box i {
     position: absolute;
     color: #7d2ae8;
-    font-style: 17px;
+    font-size: 17px;
 }
 
 .form-container .text {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: #333;
 }
@@ -215,7 +234,8 @@ body {
     color: #fff;
     background: #7d2ae8;
     border-radius: 6px;
-    padding: 0;
+    padding: 5px;
+    height: auto;
     width: 25%;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -228,11 +248,13 @@ body {
 .form .form-container label {
     color: #2b1cff;
     font-weight: 700;
+    font-size: 15px;
 }
 
 .form .form-container label:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: #009b08;
 }
 
 .container #flip {

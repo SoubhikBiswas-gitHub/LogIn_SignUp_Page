@@ -32,15 +32,17 @@
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class="fa-solid fa-envelope"></i>
-                                <input type="text" name="" id="lname" placeholder="Enter your mail" autocomplete="off"
+                                <input type="text" name="" id="lmail" placeholder="Enter your mail" autocomplete="off"
                                     required>
                             </div>
                             <div class="input-box">
                                 <i class="fa-solid fa-lock"></i>
                                 <input type="password" name="" id="lpass" placeholder="Enter your password"
                                     autocomplete="off" required>
+                                    <i class="fa-solid fa-eye" id="lpassword_visiable"></i>
+
                             </div>
-                            <div class="text"><a href="#">Forget Password ?</a></div>
+                            <div class="text"><a href="#" id="lf">Forget Password ?</a></div>
                             <div class="button input-box">
                                 <input type="button" value="LogIn" id="lbtn">
                             </div>
@@ -48,8 +50,8 @@
                         </div>
                     </form>
                 </div>
-                <!-- ==========SignUp=============== -->
                 <!-- =============================== -->
+                <!-- ==========SignUp=============== -->
                 <!-- =============================== -->
 
                 <div class="sign-up-form">
@@ -70,37 +72,32 @@
                                 <input type="number" id="scontact" placeholder="Enter your contact no" autocomplete="off"
                                     required>
                                     <span class=" check" id="conatctSpan">
-                                        <!-- <i class="fa-solid fa-circle-check" id="iconv"></i> -->
-                                        <!-- <i class="fa-solid fa-circle-exclamation" id="iconiv"></i> -->
                                     </span>
                             </div>
                             <div class="input-box">
                                 <i class="fa-solid fa-envelope"></i>
                                 <input type="email" id="smail" placeholder="Enter your mail" autocomplete="off" required>
                                 <span class=" check" id="emailSpan">
-                                    <!-- <i class="fa-solid fa-circle-check" id="iconv"></i> -->
-                                    <!-- <i class="fa-solid fa-circle-exclamation" id="iconiv"></i> -->
                                 </span>
                             </div>
                             <div class="input-box">
                                 <i class="fa-solid fa-lock"></i>
                                 <input type="password" id="spass" placeholder="Enter your password" autocomplete="off"
                                     required>
+                                    <i class="fa-solid fa-eye" id="password_visiable"></i>
+                                    <!-- <i class="fa-solid fa-eye-slash" id="password_hide"></i> -->
                                     <span class=" check" id="passSpan">
-                                        <!-- <i class="fa-solid fa-circle-check" id="iconv"></i> -->
-                                        <!-- <i class="fa-solid fa-circle-exclamation" id="iconiv"></i> -->
                                     </span>
                             </div>
                             <div class="input-box">
                                 <i class="fa-solid fa-lock"></i>
                                 <input type="password" id="scpass" placeholder="Enter your Confirm password"
                                     autocomplete="off" required>
+                                    <i class="fa-solid fa-eye" id="cpassword_visiable"></i>
                                     <span class=" check" id="cpassSpan">
-                                        <!-- <i class="fa-solid fa-circle-check" id="iconv"></i> -->
-                                        <!-- <i class="fa-solid fa-circle-exclamation" id="iconiv"></i> -->
                                     </span>
                             </div>
-                            <div class="text"><a href="#">Forget Password ?</a></div>
+                            <div class="text"><a href="#" id="sf">Forget Password ?</a></div>
                             <div class="button input-box">
                                 <input type="button" value="SignUp" id="sbtn" class="">
                             </div>
