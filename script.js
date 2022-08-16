@@ -164,13 +164,11 @@ sbutton.addEventListener("click", function () {
     }
     swal({
       title: "Good job !",
-      text: "You Details Successfully Submited ! ",
+      text: "Your Details Successfully Stored 🙂 ! ",
       icon: "success",
       button: "All Done!",
     });
   }
 });
 
-// let checkClasslist = document.getElementsByClassName("check");
-// console.log(checkClasslist)
 
